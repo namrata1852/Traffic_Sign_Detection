@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignSavvy | SignSavvy.com</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Signika+Negative&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Pacifico&display=swap"
+     rel="stylesheet">
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --navbar-height: 59px;
+}
+
+
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 0;
+}
+#logo{
+    font-style:sans-serif;
+    margin: 8px 38px;
+    font-size: 1.3rem;
+}
+#logo img{
+    margin: 3px 7px;
+    height: 50px;
+    width: 80px;
+}
+#navbar ul{
+    display: flex;
+    font-family: 'Signika Negative', sans-serif;
+}
+#navbar::before{
+    content: "";
+    background-color: rgb(4, 104, 176);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+#navbar ul li{
+   /* color: white;*/
+   list-style: none;
+   font-size: 1.3rem;
+}
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+.home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height:550px;
+    justify-content: center;
+    align-items: center;
+}
+.home::before{
+    content: "";
+    position: absolute;
+    height: 500px;
+    top: 0px;
+    left: 0px;
+    height: 72%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+}
+.home h1{
+    color: black;
+    text-align: center;
+    font-family: 'Bree Serif', serif; 
+}
+.home p{
+    color: black;
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Bree Serif', serif;
+}
+
+.run{
+    display: flex;
+    flex-direction: column;
+    padding: 1px 2px;
+    height:130px;
+    justify-content: center;
+    align-items: center;
+}
+.run .btn{
+  padding: 6px 20px;
+  border: 2px solid white;
+  background-color: rgb(3, 117, 216);
+  color: white;
+  margin: 17px;
+  font-size: 1.0rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+#services{
+    margin: 34px;
+    display: flex;
+}
+#services .box{
+    border: 2px solid black;
+    padding: 14px;
+    margin: 2px 25px;
+    border-radius: 28px;
+    background: white;
+    margin-bottom: 20px;
+}
+#services .box img{
+    height: 160px;
+    margin: auto;
+    display: block;
+}
+#services .box p{
+    font-family: 'Bree Serif', serif;
+}
+#services .box p1{
+    color: gray;
+}
+
+
+#client-section::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+}
+#clients{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#client-item{
+    padding: 34px;
+}
+#clients img{
+    height: 124px;
+}
+#contact{
+    cursor: pointer;
+    /* position: relative; */
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height:100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('images/Contact\ us.jpg')no-repeat center center/cover;    
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 34px;
+}
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+}
+#contact-box form{
+    width: 40%;
+}
+#contact-box label{
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+}
+
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+
+}
+
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+button[type=submit]{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+    margin: 17px;
+    font-size: 1.0rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.center{
+    text-align: center;
+}
+
+.client-item img{
+    margin: 10px;
+}
+button[type=submit]:hover{
+  background-color: rebeccapurple;
+  color: aquamarine;
+  
+}
+
+.wrapper{
+    max-width: 1090px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .wrapper .table{
+    background: #fff;
+    width: calc(33% - 20px);
+    padding: 30px 30px;
+    position: relative;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
+  .table .price-section{
+    display: flex;
+    justify-content: center;
+  }
+  .table .price-area{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    padding: 2px;
+  }
+  .price-area .inner-area{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    line-height: 117px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+  }
+  .price-area .inner-area .text{
+    font-size: 25px;
+    font-weight: 400;
+    position: absolute;
+    top: -10px;
+    left: 17px;
+  }
+  .price-area .inner-area .price{
+    font-size: 45px;
+    font-weight: 500;
+    margin-left: 16px;
+  }
+  .table .package-name{
+    width: 100%;
+    height: 2px;
+    margin: 35px 0;
+    position: relative;
+  }
+  .table .package-name::before{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 25px;
+    font-weight: 500;
+    background: #fff;
+    padding: 0 15px;
+    transform: translate(-50%, -50%);
+  }
+  .table .features li{
+    margin-bottom: 15px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  .features li .list-name{
+    font-size: 17px;
+    font-weight: 400;
+  }
+  .features li .icon{
+    font-size: 15px;
+  }
+  .features li .icon.check{
+    color: black;
+  }
+  .features li .icon.cross{
+    color: #cd3241;
+  }
+  .table .btn{
+    width: 100%;
+    display: flex;
+    margin-top: 35px;
+    justify-content: center;
+  }
+  .table .btn button{
+    width: 80%;
+    height: 50px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .table .btn button:hover{
+    border-radius: 5px;
+  }
+  .basic .features li::selection{
+    background: black;
+  }
+  .basic ::selection,
+  .basic .price-area,
+  .basic .inner-area{
+    background: black;
+  }
+  .basic .btn button{
+    border: 2px solid black;
+    background: #fff;
+    color: black;
+  }
+  .basic .btn button:hover{
+    background: black;
+    color: white;
+  }
+  .premium ::selection,
+  .premium .price-area,
+  .premium .inner-area
+  {
+    background: black;
+  }
+  .premium .btn button{
+    border: 2px solid black;
+    color: black;
+    background: #fff;
+  }
+  .premium .btn button:hover{
+    background: black;
+    color: white;
+  }
+  .ultimate ::selection,
+  .ultimate .price-area,
+  .ultimate .inner-area{
+    background: black;
+  }
+  .ultimate .btn button{
+    border: 2px solid black;
+    color: black;
+    background: #fff;
+  }
+  .ultimate .btn button:hover{
+    background: black;
+    color: white;
+  }
+  .basic .package-name{
+    background: black;
+  }
+  .premium .package-name{
+    background: black;
+  }
+  .ultimate .package-name{
+    background: black;
+  }
+  .basic .package-name::before{
+    content: "Basic";
+  }
+  .premium .package-name::before{
+    content: "Premium";
+    font-size: 24px;
+  }
+  .ultimate .package-name::before{
+    content: "Ultimate";
+    font-size: 24px;
+  }
+  @media (max-width: 1020px) {
+    .wrapper .table{
+      width: calc(50% - 20px);
+      margin-bottom: 40px;
+    }
+  }
+  @media (max-width: 698px) {
+    .wrapper .table{
+      width: 100%;
+    }
+  }
+  ::selection{
+    color: #fff;
+  }
+  .table .ribbon{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    overflow: hidden;
+  }
+  .table .ribbon::before,
+  .table .ribbon::after{
+    position: absolute;
+    content: "";
+    z-index: -1;
+    display: block;
+    border: 7px solid black;
+    border-top-color: transparent;
+    border-left-color: transparent;
+  }
+  .table .ribbon::before{
+    top: 0px;
+    right: 15px;
+  }
+  .table .ribbon::after{
+    bottom: 15px;
+    left: 0px;
+  }
+  .table .ribbon span{
+    position: absolute;
+    top: 30px;
+    right: 0;
+    transform: rotate(-45deg);
+    width: 200px;
+    background: black;
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
+    font-size: 17px;
+    text-transform: uppercase;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.12);
+  }
+
+
+  .contact{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,auto));
+    gap:2.5rem;
+    background: white;
+    padding:50px;
+ }
+ .contact-box h4{
+    margin-bottom: 1.5rem;
+    font-size: 18px;
+    color:var(--bg-color);
+ }
+ .contact-box li{
+    color:white;
+    margin-bottom: 18px;
+ }
+ .contact-box li a{
+    display:block;
+    color:black;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all .50s ease;
+ }
+ .contact-box li a:hover{
+    transform:translateX(-7px);
+    color:var(--main-color);
+}
+.contact-box h5{
+    font-size: 16px;
+    font-weight: 600;
+    color:black;
+}
+.social i {
+    display:flex;
+    float:left;
+    height:37px;
+    width:37px;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 20px;
+    margin-right: 0.1rem;
+    color:var(--main-color);
+    transition: all .50 ease;
+}
+.social i:hover{
+    background: var(--main-color);
+    color:var(--bg-color);
+    transition: scale(1.1);
+}
+  </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="/static/images/logo-traffic.jpg" width="70px" height="70px" alt="SignSavvy.com">
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#services-container">Services</a></li>
+            <li class="item"><a href="#client-section">Pricing</a></li>
+            <li class="item"><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+    <section>
+      <div class="home">
+        <h3>Revolutionizing Autonomous Driving</h3>
+        <h1 class="h-primary">Intelligent, Safe,<br> and Reliable</h1>
+        <p>Welcome to SignSavvy, the premier technology company that’s transforming the way autonomous vehicles drive.<br> 
+          Our innovative machine learning application detects real-time traffic signs, ensuring safe and <br>efficient travel. 
+          We’re committed to developing cutting-edge solutions that enhance road safety,<br> reduce accidents,
+          and improve travel experience. Trust us to deliver reliable autonomous driving<br>services that meet your needs.</p>
+      </div>
+    </section>
+    <section class="run">
+        <h2>Explore Now</h2>
+        <form action="/start_cameraa" method="get">
+            <button class="btn", type="submit">Start Camera</button>
+        </form>
+        <form action="/stop_cameraa" method="get">
+            <button class="btn", type="submit">Stop Camera</button>
+        </form>
+
+       
+    </section>
+    <section id="services-container">
+        <h1 class="h-primary center">Our Services</h1>
+        <div id="services">
+            <div class="box">
+                <img src="/static/images/t1.jpg" alt="">
+                <h2 class="h-secondary center">Real-Time Detection</h2>
+                <p1>Our real-time detection technology is designed to identify traffic signs in real-time and provide critical information to autonomous vehicles. This feature ensures accurate and timely driving decisions and helps prevent accidents on the road.</p1>
+            </div>
+            <div class="box">
+                <img src="/static/images/t2.jpeg" alt="">
+                <h2 class="h-secondary center">Autonomous Driving</h2>
+                <p1>We specialize in providing autonomous driving solutions that are designed to improve driving efficiency and reduce the need for human intervention. Our technology is powered by advanced machine learning algorithms that enable autonomous vehicles to make informed and safe driving decisions.</p1>
+            </div>
+            <div class="box">
+                <img src="/static/images/t3.jpg" alt="">
+                <h2 class="h-secondary center">Traffic Sign Detection</h2>
+                <p1>Our traffic sign detection technology is designed to enhance driving safety by identifying and interpreting traffic signs in real-time. This feature ensures that autonomous vehicles follow traffic rules and regulations, making the road safer for everyone.</p1>
+            </div>
+        </div>
+</section>
+     <section id="client-section">
+      <h1 class="h-primary center">Prices</h1>
+        <div class="wrapper">
+            <div class="table basic">
+              <div class="price-section">
+                <div class="price-area">
+                  <div class="inner-area">
+                    <span class="text">$</span>
+                    <span class="price">29</span>
+                  </div>
+                </div>
+              </div>
+              <div class="package-name"></div>
+              <ul class="features">
+                <li>
+                  <span class="list-name"> Basic Sign Detection</span>
+                  <span class="icon check"><i class="fas fa-check"></i></span>
+                </li>
+                <li>
+                  <span class="list-name">Autonomous Vehicle Navigation</span>
+                  <span class="icon check"><i class="fas fa-check"></i></span>
+                </li>
+                <li>
+                  <span class="list-name">Only critical sign detection, such as stop signs and yield signs.</span>
+                  <span class="icon cross"><i class="fas fa-times"></i></span>
+                </li>
+              </ul>
+              <div class="btn"><button>Purchase</button></div>
+            </div>
+            <div class="table premium">
+              <div class="ribbon"><span>Recommend</span></div>
+              <div class="price-section">
+                <div class="price-area">
+                  <div class="inner-area">
+                    <span class="text">$</span>
+                    <span class="price">59</span>
+                  </div>
+                </div>
+              </div>
+              <div class="package-name"></div>
+              <ul class="features">
+                <li>
+                  <span class="list-name">Includes basic signs</span>
+                  <span class="icon check"><i class="fas fa-check"></i></span>
+                </li>
+                <li>
+                  <span class="list-name">Can recognize speed limits, school zones, and no passing zones.</span>
+                  <span class="icon check"><i class="fas fa-check"></i></span>
+                </li>
+                <li>
+                  <span class="list-name">Traffic management and fleet studies</span>
+                  <span class="icon check"><i class="fas fa-check"></i></span>
+                </li>
+              </ul>
+              <div class="btn"><button>Purchase</button></div>
+            </div>
+            <div class="table ultimate">
+              <div class="price-section">
+                <div class="price-area">
+                  <div class="inner-area">
+                    <span class="text">$</span>
+                    <span class="price">99</span>
+                  </div>
+                </div>
+              </div>
+              <div class="package-name"></div>
+              <ul class="features">
+                <li>
+                  <span class="list-name">Everthing included in premium plan</span>
+                  <span class="icon check"><i class="fas fa-check"></i></span>
+                </li>
+                <li>
+                  <span class="list-name">All standard signs recognition and customizable alerts</span>
+                  <span class="icon check"><i class="fas fa-check"></i></span>
+                </li>
+                <li>
+                  <span class="list-name">API access with other systems</span>
+                  <span class="icon check"><i class="fas fa-check"></i></span>
+                </li>
+                <li>
+                  <span class="list-name">Light illumination detection</span>
+                  <span class="icon check"><i class="fas fa-check"></i></span>
+                </li>
+              </ul>
+              <div class="btn"><button>Purchase</button></div>
+            </div>
+          </div>
+     </section>
+    </section>
+    <!--contact section-->
+          <section class="contact">
+                <div class="contact-box">
+                 <h4>MY ACCOUNT</h4>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services-container">Services</a></li>
+                <li><a href="#client-section">Pricing</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                </div>
+
+                <div class="contact-box">
+                 <h4>QUICK LINKS</h4>
+                <li><a href="#">Orders Tracking</a></li>
+                <li><a href="#">Detection</a></li>
+                <li><a href="#">My account</a></li>
+                <li><a href="#">FAQs</a></li>
+                </div>
+
+                <div class="contact-box">
+                 <h4>INFORMATION</h4>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Career</a></li>
+                <li><a href="#">Delivery information</a></li>
+                <li><a href="#">Terms & conditions</a></li>
+                </div>
+
+                <div class="contact-box">
+                 <h4>Customer service</h4>
+                <li><a href="#">Policies</a></li>
+                <li><a href="#">Help & Contact us</a></li>
+                <li><a href="#">Returns & Refunds</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                </div>
+
+                <div class="contact-box">
+                 <h4>SignSavvy</h4>
+                 <h5>Connect with us</h5>
+                 <div class="social">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-instagram' ></i></a>
+                    <a href="#"><i class='bx bxl-twitter' ></i></a>
+                 </div>
+          </section>
+     <footer>
+        <div class="center">
+            Copyright &copy; www.SignSavvy.com. All rights reserved
+        </div>
+     </footer>
+</body>
+</html>
